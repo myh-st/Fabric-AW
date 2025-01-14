@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "RPT_PublicHolidays"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bbdafa49-7885-4282-80ab-eeb3203be17c"
+  }
+}

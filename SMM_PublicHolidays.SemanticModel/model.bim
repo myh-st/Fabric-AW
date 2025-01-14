@@ -1,0 +1,177 @@
+{
+  "compatibilityLevel": 1604,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.140.7510.1 (Main)+b366c58134dd42df942e9bba65379f3f23973ee0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"DatabaseQuery\"]"
+      }
+    ],
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "annotations": [
+          {
+            "name": "PBI_IncludeFutureArtifacts",
+            "value": "False"
+          }
+        ],
+        "expression": [
+          "let",
+          "    database = Sql.Database(\"NOUOHHBHYTNETHDYUXJXKUU6FI-7LBFNKEJ4AJEJI5IBEKZQV7PWY.datawarehouse.fabric.microsoft.com\", \"6d2f3d1e-d279-4986-8307-7805ab609900\")",
+          "in",
+          "    database"
+        ],
+        "kind": "m",
+        "lineageTag": "d6f5582a-c17e-4567-9f64-38bd4f7574a7"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "publicholidays",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "countryOrRegion",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ece0cbda-31e6-435b-a5dc-28ddd1a7c63b",
+            "sourceColumn": "countryOrRegion",
+            "sourceLineageTag": "countryOrRegion",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "holidayName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3dd9f8d6-e708-4061-86d1-6d21d2e3d292",
+            "sourceColumn": "holidayName",
+            "sourceLineageTag": "holidayName",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "normalizeHolidayName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3b27821a-7092-47bc-bb01-2d607e98fb0a",
+            "sourceColumn": "normalizeHolidayName",
+            "sourceLineageTag": "normalizeHolidayName",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "isPaidTimeOff",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "e34ff333-7b70-4191-8b66-ba7d11ef4e3f",
+            "sourceColumn": "isPaidTimeOff",
+            "sourceLineageTag": "isPaidTimeOff",
+            "sourceProviderType": "bit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "countryRegionCode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6d42c163-bb41-41db-9c56-00cdc992c9ce",
+            "sourceColumn": "countryRegionCode",
+            "sourceLineageTag": "countryRegionCode",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "07de056f-f3e5-46ec-bab7-4d11090da5c1",
+            "sourceColumn": "date",
+            "sourceLineageTag": "date",
+            "sourceProviderType": "datetime2",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2c8fbff0-ebdb-4610-b2c3-d192f6bd5d2b",
+        "partitions": [
+          {
+            "name": "publicholidays",
+            "mode": "directLake",
+            "source": {
+              "entityName": "publicholidays",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo",
+              "type": "entity"
+            }
+          }
+        ],
+        "sourceLineageTag": "[dbo].[publicholidays]"
+      }
+    ]
+  }
+}
