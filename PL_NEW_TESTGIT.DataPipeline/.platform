@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "PL_NEW_TESTGIT"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "01573924-6158-4102-b002-f198c2be0cc0"
+  }
+}
