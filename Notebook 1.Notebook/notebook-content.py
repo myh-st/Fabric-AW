@@ -16,6 +16,7 @@
 
 new commit nirutti
 demo02 new
+mu admin remove user from fabric
 
 # METADATA ********************
 
